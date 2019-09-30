@@ -1,4 +1,6 @@
-package com.company;
+package com.company.Array;
+
+import com.company.Array.Array;
 
 /**
  * 声明数组

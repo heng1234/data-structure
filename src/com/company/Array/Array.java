@@ -1,4 +1,4 @@
-package com.company;
+package com.company.Array;
 
 
 
@@ -109,13 +109,28 @@ public class Array<E> {
      * @param index
      * @return
      */
-    E get(int index){
+    public E get(int index){
         if(index <0 || index >= size){
             throw  new IllegalArgumentException("Get faied. Array is null");
         }
         return  data[index];
     }
 
+    /**
+     * 拿到最后一个元素
+     * @return
+     */
+    public E getLast(){
+      return get(size - 1);
+    }
+
+    /**
+     * 拿到第一个元素
+     * @return
+     */
+    public E getFirst(){
+        return get(0);
+    }
     /**
      * 根据下标更新
      * @param index
