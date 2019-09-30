@@ -4,7 +4,7 @@ import com.company.Array.Array;
 
 /**
  * ArrayStack
- *
+ * 栈的实现
  * @author heng
  * @date 2019/9/30
  **/
