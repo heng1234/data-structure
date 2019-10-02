@@ -201,8 +201,9 @@ public class Array<E> {
             throw  new IllegalArgumentException("Remove faied. Array Require index>= 0 and index <= size");
         }
         E ret = data[index];
-        for(int i = index+1; i < index; i++) {
+        for(int i = index+1; i < size; i++) {
             data[i-1] = data[i];
+
         }
 
         size --;//注意size --后还存在一个值只不过用户访问不到这个值
