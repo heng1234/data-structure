@@ -1,5 +1,7 @@
 package com.company.Queue;
 
+import com.company.LinkedList.LinkedListQueue;
+
 import java.util.Random;
 
 /**
@@ -42,11 +44,14 @@ public class Main {
      //测试均摊时间
 
         int opCount = 1000000;
-        ArrayQueue<Integer> arrayQueue =  new ArrayQueue<Integer>();
+      //  ArrayQueue<Integer> arrayQueue =  new ArrayQueue<Integer>();
         LoopQueue<Integer> loopQueue =  new LoopQueue<Integer>();
-        double time1 =testQueue(arrayQueue,opCount);
+        LinkedListQueue<Integer> linkedListQueue =  new LinkedListQueue<>();
+      //  double time1 =testQueue(arrayQueue,opCount);
         double time2 =testQueue(loopQueue,opCount);
-        System.out.println(time1);
+        double time3 =testQueue(linkedListQueue,opCount);
+        //System.out.println(time1);
         System.out.println(time2);
+        System.out.println(time3);
     }
 }

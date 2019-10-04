@@ -95,6 +95,7 @@ public class Array<E> {
             this.resize(2 * data.length);
            // throw  new IllegalArgumentException("Add faied. Array is null");
         }
+
         for(int i = size-1; i >= index; i--) {
             data[i+1] = data[i];
         }

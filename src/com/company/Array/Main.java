@@ -21,9 +21,7 @@ public class Main {
         System.out.println(array);
 
         array.add(6,99);
-        array.addFirst(0);
-        System.out.println(array);
-        array.romoveElementAll(1);
+
         System.out.println(array);
 
 
