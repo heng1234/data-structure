@@ -74,7 +74,7 @@ public class LinkedListQueue<E> implements Queue<E> {
     }
 
     /**
-     * 出对
+     * 出队
      * @return
      */
     @Override
