@@ -13,11 +13,20 @@ public class Main {
         for (int i = 0; i < nums.length; i++) {
             bst.add(nums[i]);
         }
-        bst.preOrder();
+     //   bst.preOrder();
+     //   System.out.println();
+        //bst.preOrderNR();
+//        System.out.println();
+      /*  bst.inOrder();
         System.out.println();
-        bst.inOrder();
+        bst.postOrder();*/
+
+      //bst.levelOrder();
+
+        System.err.println(bst.removeMin());
+        System.err.println(bst.removeMax());
         System.out.println();
-        bst.postOrder();
+        bst.preOrderNR();
     }
 
 }

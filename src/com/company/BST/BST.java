@@ -1,5 +1,9 @@
 package com.company.BST;
 
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+
 /**
  * BST
  * 二分搜索树
@@ -141,6 +145,32 @@ public class BST<E extends Comparable<E>> {
            preOrder(node.right);
        }
      }
+     //二分搜索树非递归 使用栈
+     public void preOrderNR(){
+         Stack<Node> stack = new Stack<>();
+         stack.push(root);
+         while (!stack.isEmpty()){
+             Node cur = stack.pop();
+             System.out.println(cur.e);
+             if (cur.right != null)
+             stack.push(cur.right);
+             if (cur.left != null)
+                 stack.push(cur.left);
+         }
+     }
+     //二分搜索树的层次遍历 使用队列
+    public void levelOrder(){
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(root);
+        while (!queue.isEmpty()){
+            Node cur = queue.remove();
+            System.out.println(cur.e);
+            if (cur.left != null)
+                queue.add(cur.left);
+            if (cur.right != null)
+                queue.add(cur.right);
+        }
+    }
  //生成以node为根节点 深度为depth的描述二叉树的字符串
      private void generateBSTString(Node node , int depth,StringBuilder builder){
          if (node == null){
@@ -182,6 +212,165 @@ public class BST<E extends Comparable<E>> {
             System.out.println(node.e);
 
         }
+    }
+
+    /**
+     * 拿到二分搜索树的最小值
+     * 递归
+     * @return
+     */
+    public E mininum(){
+        if(size == 0){
+            throw new IllegalArgumentException("BST is empty");
+        }
+        return mininum(root).e;
+    }
+    /**
+     * 拿到二分搜索树的最小值
+     * 递归
+     * @return
+     */
+    private Node mininum(Node node){
+       if(node.left == null){
+           return node;
+       }
+       return mininum(node.left);
+    }
+
+    /**
+     * 拿到二分搜索树的最大值
+     * 递归
+     * @return
+     */
+    public E maxnum(){
+        if(size == 0){
+            throw new IllegalArgumentException("BST is empty");
+        }
+        return maxnum(root).e;
+    }
+    /**
+     * 拿到二分搜索树的最大值
+     * 递归
+     * @return
+     */
+    private Node maxnum(Node node){
+        if(node.right == null){
+            return node;
+        }
+        return maxnum(node.right);
+    }
+
+    /**
+     * 拿到二分搜索树的最大值
+     * 非递归
+     * @return
+     */
+    public E getMaxVal(){
+       return getMaxVal(root);
+    }
+    /**
+     * 拿到二分搜索树的最大值
+     * 非递归
+     * @return
+     */
+    private E getMaxVal(Node node){
+        Node cur = node.right;
+        while (cur != null){
+            if(cur.right == null){
+                return cur.e;
+            }
+            cur = cur.right;
+        }
+        return node.e;
+    }
+
+    /**
+     * 拿到二分搜索树的最小值
+     * 非递归
+     * @return
+     */
+    public E getMinVal(){
+        if (root == null) {
+          return  null;
+        }
+        return getMinVal(root);
+    }
+
+    /**
+     * 拿到二分搜索树的最小值
+     * 非递归
+     * @param node
+     * @return
+     */
+    private E getMinVal(Node node){
+            Node cur = node.left;
+          while (cur != null){
+              if(cur.left == null){
+                  return cur.e;
+              }
+              cur = cur.left;
+          }
+        return node.e;
+
+    }
+
+    /**
+     * 二分搜索树递归删除最小值
+     * @return
+     */
+    public E removeMin(){
+        E ret = mininum();
+        root =removeMin(root);
+        return ret;
+    }
+
+    /**
+     * 删除以node为根的二分搜索树中的最小节点
+     * 返回删除节点后新的二分搜索树的根
+     * @param node
+     * @return
+     */
+    private Node removeMin(Node node){
+        if (node.left == null){
+            //因为node.left ==null说明没有左子节点了
+            //可能还要存在右子节点需要把
+            //右子节点变为要删除的位置也就是左子节点
+            Node rightNode = node.right;
+            node.right = null;
+            size --;
+            return rightNode;
+        }
+        node.left = removeMin(node.left);
+        return node;
+    }
+
+    /**
+     * 二分搜索树递归删除最大值
+     * @return
+     */
+    public E removeMax(){
+        E ret = maxnum();
+        root =removeMax(root);
+        return ret;
+    }
+    /**
+     * 删除以node为根的二分搜索树中的最大节点
+     * 返回删除节点后新的二分搜索树的根
+     * @param node
+     * @return
+     */
+    private Node removeMax(Node node){
+        if (node.right == null){
+            //因为node.right ==null说明没有右子节点了
+            //可能还要存在左子节点需要把
+            //左子节点变为要删除的位置也就是右子节点
+            Node leftNode = node.left;
+            node.left = null;
+            size --;
+            return leftNode;
+        }
+        node.right = removeMax(node.right);
+        return node;
     }
      @Override
     public String toString(){
