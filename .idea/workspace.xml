@@ -5,6 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="483ff867-14cd-4005-9df0-a8cac845263b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/company/Set/BSTSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Set/FileOperation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Set/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Set/Set.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Set/text.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/BST/BST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/BST/BST.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -24,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/BST/BST.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="419" column="17" selection-start-line="419" selection-start-column="17" selection-end-line="419" selection-end-column="17" />
+            <state relative-caret-position="238">
+              <caret line="419" column="28" lean-forward="true" selection-start-line="419" selection-start-column="28" selection-end-line="419" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2346#2347#0" expanded="true" />
@@ -44,6 +50,56 @@
                 <element signature="e#8427#8428#0" expanded="true" />
                 <element signature="e#8457#8458#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Set/Set.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="759">
+              <caret line="36" column="14" lean-forward="true" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Set/BSTSet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="65">
+              <caret line="38" column="31" lean-forward="true" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
+              <folding>
+                <element signature="e#238#239#0" expanded="true" />
+                <element signature="e#270#271#0" expanded="true" />
+                <element signature="e#352#353#0" expanded="true" />
+                <element signature="e#372#373#0" expanded="true" />
+                <element signature="e#470#471#0" expanded="true" />
+                <element signature="e#487#488#0" expanded="true" />
+                <element signature="e#501#502#0" expanded="true" />
+                <element signature="e#529#530#0" expanded="true" />
+                <element signature="e#527#528#0" expanded="true" />
+                <element signature="e#560#561#0" expanded="true" />
+                <element signature="e#606#607#0" expanded="true" />
+                <element signature="e#644#645#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Set/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Set/text.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="16271" column="59" selection-start-line="16271" selection-start-column="59" selection-end-line="16271" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -122,6 +178,11 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/com/company/BST/Main.java" />
         <option value="$PROJECT_DIR$/src/com/company/BST/BST.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Set/Set.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Set/BSTSet.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Set/FileOperation.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Set/text.txt" />
+        <option value="$PROJECT_DIR$/src/com/company/Set/Main.java" />
       </list>
     </option>
   </component>
@@ -161,8 +222,8 @@
     <option name="IS_UNIT_TEST_ENABLED" value="true" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="907" />
-    <option name="y" value="75" />
+    <option name="x" value="713" />
+    <option name="y" value="185" />
     <option name="width" value="1490" />
     <option name="height" value="918" />
   </component>
@@ -202,7 +263,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="BST" type="462c0819:PsiDirectoryNode" />
+              <item name="Set" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -238,7 +299,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Main (1)">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Set.Main" />
+      <module name="data-structure" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.Set.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.BST.Main" />
       <module name="data-structure" />
@@ -291,33 +365,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Sum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.Recursion.Sum" />
-      <module name="data-structure" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.Recursion.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="Application.Sum" />
       <item itemvalue="Application.Solution4" />
       <item itemvalue="Application.Ride" />
       <item itemvalue="Application.Solution5" />
       <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Main (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Solution5" />
         <item itemvalue="Application.Ride" />
         <item itemvalue="Application.Solution4" />
-        <item itemvalue="Application.Sum" />
       </list>
     </recent_temporary>
   </component>
@@ -335,15 +396,15 @@
       <workItem from="1569661574256" duration="2996000" />
       <workItem from="1569844841981" duration="4388000" />
       <workItem from="1569914256114" duration="5289000" />
-      <workItem from="1569941150711" duration="84727000" />
+      <workItem from="1569941150711" duration="88206000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112340000" />
+    <option name="totallyTimeSpent" value="115819000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="726" y="60" width="1192" height="734" extended-state="0" />
+    <frame x="571" y="148" width="1192" height="734" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19417475" />
@@ -701,8 +762,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/BST/BST.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="419" column="17" selection-start-line="419" selection-start-column="17" selection-end-line="419" selection-end-column="17" />
+        <state relative-caret-position="238">
+          <caret line="419" column="28" lean-forward="true" selection-start-line="419" selection-start-column="28" selection-end-line="419" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2346#2347#0" expanded="true" />
@@ -718,6 +779,58 @@
             <element signature="e#8427#8428#0" expanded="true" />
             <element signature="e#8457#8458#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Set/Set.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="759">
+          <caret line="36" column="14" lean-forward="true" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Set/text.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="16271" column="59" selection-start-line="16271" selection-start-column="59" selection-end-line="16271" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Set/FileOperation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-855">
+          <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Set/BSTSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="38" column="31" lean-forward="true" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
+          <folding>
+            <element signature="e#238#239#0" expanded="true" />
+            <element signature="e#270#271#0" expanded="true" />
+            <element signature="e#352#353#0" expanded="true" />
+            <element signature="e#372#373#0" expanded="true" />
+            <element signature="e#470#471#0" expanded="true" />
+            <element signature="e#487#488#0" expanded="true" />
+            <element signature="e#501#502#0" expanded="true" />
+            <element signature="e#529#530#0" expanded="true" />
+            <element signature="e#527#528#0" expanded="true" />
+            <element signature="e#560#561#0" expanded="true" />
+            <element signature="e#606#607#0" expanded="true" />
+            <element signature="e#644#645#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Set/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
         </state>
       </provider>
     </entry>
