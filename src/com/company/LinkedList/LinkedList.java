@@ -175,6 +175,23 @@ public class LinkedList<E> {
     public E removeLast(){
         return reomve(size - 1);
     }
+   //删除链表中的e
+    public void  removeElement(E e){
+        Node pre = dummyHead;
+        while(pre.next != null){
+            if(pre.next.e.equals(e))
+                break;
+
+            pre = pre.next;
+        }
+        if(pre.next != null){
+            Node delNode = pre.next;
+            pre.next = delNode.next;
+            delNode.next = null;
+
+        }
+    }
+
     @Override
     public String toString(){
      StringBuilder res = new StringBuilder();
