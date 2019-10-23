@@ -1,5 +1,9 @@
 package com.company.Map;
 
+import com.company.Set.FileOperation;
+
+import java.util.ArrayList;
+
 /**
  * LinkedListMap
  *
@@ -118,5 +122,27 @@ public class LinkedListMap<K,V> implements Map<K,V> {
      return null;
     }
 
+    public static void main(String[] args) {
+        System.out.println("text.txt");
+        /**
+         * 不去重复
+         */
+        ArrayList<String> words = new ArrayList<>();
+        boolean bol = FileOperation.readFile("H:\\gitdemo\\data-structure\\src\\com\\company\\Set\\text.txt", words);
+        if (bol) {
+            System.out.println("ArrayList------" + words.size());
 
+            LinkedListMap<String,Integer> str = new LinkedListMap<>();
+            for (String word : words) {
+                if(str.contains(word)){
+                    str.set(word,str.get(word)+1);
+                }else{
+                    str.add(word,1);
+                }
+            }
+
+            System.out.println(str.getSize());
+            System.out.println("all" + str.get("all"));
+        }
+    }
 }
