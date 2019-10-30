@@ -19,6 +19,16 @@ public class MaxHeap<E extends Comparable<E>>   {
         data = new Array<>();
     }
 
+    /**
+     * 数组转换堆
+     * @param arr
+     */
+    public MaxHeap(E[] arr){
+        data = new Array<>(arr);
+        for (int i=parent(arr.length-1);i>=0;i--){
+            siftDown(i);
+        }
+    }
     //返回堆中有多少元素
     public int size(){
         return data.getSize();
@@ -82,7 +92,7 @@ public class MaxHeap<E extends Comparable<E>>   {
     }
 
     private void siftDown(int i) {
-        //如果左孩子索引小于data的isze
+        //如果左孩子索引小于data的size
         while (leftChild(i) < data.getSize()){
             //定义个变量 j等于左孩子索引
             int j = leftChild(i);
@@ -104,4 +114,13 @@ public class MaxHeap<E extends Comparable<E>>   {
             i=j;
         }
     }
+
+    //去出堆中最大的元素 并替换为元素e
+    public E replace(E e){
+        E ret = findMax();
+        data.set(0,e);
+        siftDown(0);
+        return ret;
+    }
+
 }

@@ -35,7 +35,13 @@ public class Array<E> {
         data = (E[])new Object[capacaity];
         size = 0;
     }
-
+    public Array(E[] arr){
+        data = (E[])new Object[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            data[i] = arr[i];
+        }
+        size = arr.length;
+    }
     /**
      * 返回数组中容量大小
      * @return
@@ -137,7 +143,7 @@ public class Array<E> {
      * @param index
      * @return
      */
-    void set(int index,E e){
+    public void set(int index,E e){
         if(index <0 || index >= size){
             throw  new IllegalArgumentException("Get faied. Array is null");
         }

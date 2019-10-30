@@ -1,0 +1,73 @@
+package com.company.LiKou;
+
+import com.company.MaxHeap.PriorityQueue;
+
+import java.util.LinkedList;
+import java.util.List;
+import java.util.TreeMap;
+
+/**
+ * Solution347
+ *给定一个非空的整数数组，返回其中出现频率前 k 高的元素。
+ *
+ * 示例 1:
+ *
+ * 输入: nums = [1,1,1,2,2,3], k = 2
+ * 输出: [1,2]
+ * 示例 2:
+ *
+ * 输入: nums = [1], k = 1
+ * 输出: [1]
+ * 说明：
+ *
+ * 你可以假设给定的 k 总是合理的，且 1 ≤ k ≤ 数组中不相同的元素的个数。
+ * 你的算法的时间复杂度必须优于 O(n log n) , n 是数组的大小。
+ ** @author heng
+ * @date 2019/10/29
+ **/
+public class Solution347 {
+
+    private class Freq implements Comparable<Freq>{
+        public int e,freq;
+        public Freq(int e,int freq){
+            this.e=e;//元素
+            this.freq=freq;//频次
+        }
+        @Override
+        public int compareTo(Freq o) {
+            if (this.freq < o.freq){//这样定义频次最低的优先级高 一般来说当前freq大于o.freq才返回1  但是这里是频率最低的优先级最高
+                return 1;
+            } else if(this.freq > o.freq){
+                return -1;
+            }else {
+                return 0;
+            }
+        }
+    }
+
+    public List<Integer> topKFrequent(int[] nums, int k) {
+        TreeMap<Integer,Integer> map = new TreeMap<>();
+        for (int num : nums) {
+            if(map.containsKey(num)){
+                map.put(num,map.get(num)+1);
+            }else {
+                map.put(num,1);
+            }
+
+        }
+        PriorityQueue<Freq> pq = new PriorityQueue<>();
+        for (int key : map.keySet()) {
+            if (pq.getSize()<k){//还没有存够k个元素
+                pq.enqueue(new Freq(key,map.get(key)));//add
+            }else if(map.get(key) > pq.getFront().freq){//如果当前key和队列队首的频次要高
+                   pq.dequeue();//出队
+                   pq.enqueue(new Freq(key,map.get(key)));//入队
+            }
+        }
+        LinkedList<Integer> res = new LinkedList<>();
+        while (!pq.isEmpty()){
+            res.add(pq.dequeue().e);
+        }
+        return res;
+    }
+}
