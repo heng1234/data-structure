@@ -1,10 +1,8 @@
 package com.company.LiKou;
 
-import com.company.MaxHeap.PriorityQueue;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.TreeMap;
+
+import java.util.*;
 
 /**
  * Solution347
@@ -25,25 +23,32 @@ import java.util.TreeMap;
  ** @author heng
  * @date 2019/10/29
  **/
-public class Solution347 {
+public class Solution347_2 {
 
-    private class Freq implements Comparable<Freq>{
+    private class Freq/* implements Comparable<Freq>*/{
         public int e,freq;
         public Freq(int e,int freq){
             this.e=e;//元素
             this.freq=freq;//频次
         }
-        @Override
+      /*  @Override
         public int compareTo(Freq o) {
-            if (this.freq < o.freq){//这样定义频次最低的优先级高 一般来说当前freq大于o.freq才返回1  但是这里是频率最低的优先级最高
+            if (this.freq > o.freq){
                 return 1;
-            } else if(this.freq > o.freq){
+            } else if(this.freq < o.freq){
                 return -1;
             }else {
                 return 0;
             }
-        }
+        }*/
     }
+/* private class FreqComparator implements Comparator<Freq>{
+
+     @Override
+     public int compare(Freq o1, Freq o2) {
+         return o1.freq-o2.freq;
+     }
+ }*/
 
     public List<Integer> topKFrequent(int[] nums, int k) {
         TreeMap<Integer,Integer> map = new TreeMap<>();
@@ -55,18 +60,25 @@ public class Solution347 {
             }
 
         }
-        PriorityQueue<Freq> pq = new PriorityQueue<>();
+        /**
+         * java PriorityQueue内部是最小堆
+         */
+        /**
+         * 定义自己的比较器 FreqComparator
+         */
+//        PriorityQueue<Freq> pq = new PriorityQueue<>(new FreqComparator());
+        PriorityQueue<Integer> pq = new PriorityQueue<>((a,b)-> map.get(a)-map.get(b));
         for (int key : map.keySet()) {
-            if (pq.getSize()<k){//还没有存够k个元素
-                pq.enqueue(new Freq(key,map.get(key)));//add
-            }else if(map.get(key) > pq.getFront().freq){//如果当前key和队列队首的频次要高
-                   pq.dequeue();//出队
-                   pq.enqueue(new Freq(key,map.get(key)));//入队
+            if (pq.size()<k){//还没有存够k个元素
+                pq.add(key);//add
+            }else if(map.get(key) > map.get(pq.peek())){//如果当前key和队列队首的频次要高
+                   pq.remove();//出队
+                   pq.add(key);//入队
             }
         }
         LinkedList<Integer> res = new LinkedList<>();
         while (!pq.isEmpty()){
-            res.add(pq.dequeue().e);
+            res.add(pq.remove());
         }
         return res;
     }

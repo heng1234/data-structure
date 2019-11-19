@@ -17,32 +17,24 @@ import com.company.SegmentTree.SegmentTree;
  * @author heng
  * @date 2019/11/5
  **/
-public class NumArray303 {
+public class NumArray303_2 {
 
-    private SegmentTree<Integer> segmentTree;
+    private int[] sum;//sum[i]存储的就是前i个元素的和 sum[0] = 0
 
-    public NumArray303(int[] nums) {
-
-        if (nums.length > 0) {
-            Integer[] data=new Integer[nums.length];
-            for (int i = 0; i < nums.length; i++) {
-                data[i] = nums[i];
-            }
-
-            segmentTree = new SegmentTree<Integer>(data, new Merger<Integer>() {
-                @Override
-                public Integer merge(Integer a, Integer b) {
-                    return a + b;
-                }
-            });
-
+    public NumArray303_2(int[] nums) {
+        sum = new int[nums.length+1];
+        sum[0] = 0;
+        for (int i = 0; i < nums.length; i++) {
+            sum[i+1] = sum[i]+nums[i];
         }
+
     }
 
     public int sumRange(int i, int j) {
-      if(segmentTree == null){
-          throw new IllegalArgumentException("Segment tree is null.");
-      }
-    return   segmentTree.query(i,j);
+       return sum[j] - sum[i+1];
     }
+
+
+
+
 }
